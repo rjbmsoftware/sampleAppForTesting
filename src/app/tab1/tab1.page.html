@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Simple user interactive buttons
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,28 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Simple user interactive buttons</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <!--  <app-explore-container name="Place for stuff"></app-explore-container>-->
+  <div>
+    <ion-button>Default button</ion-button>
+  </div>
+  <div>
+    <ion-button disabled="true">Disabled button</ion-button>
+  </div>
+  <div>
+    <ion-button (click)="disableButton($event.target)">Click to disable</ion-button>
+  </div>
+  <div>
+    <ion-button (click)="toggleButtonColour($event.target)" color="primary">colour changer</ion-button>
+  </div>
+
+  <ion-fab horizontal="center" slot="fixed" vertical="bottom">
+
+    <ion-fab-button>
+      <ion-icon name="camera"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
