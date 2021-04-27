@@ -26,11 +26,11 @@
   <div>
     <ion-button (click)="toggleButtonColour($event.target)" color="primary">colour changer</ion-button>
   </div>
+  <div>
+    <ion-button (click)="presentActionSheet()">Action sheet</ion-button>
+  </div>
+  <div>
+    <ion-button (click)="presentAlert()" expand="block">Show Alert</ion-button>
+  </div>
 
-  <ion-fab horizontal="center" slot="fixed" vertical="bottom">
-
-    <ion-fab-button>
-      <ion-icon name="camera"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
 </ion-content>
